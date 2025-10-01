@@ -67,7 +67,6 @@ D:\Project\.NET\Carties\src\AuctionService\bin\Debug\net9.0\System.Composition.H
 D:\Project\.NET\Carties\src\AuctionService\bin\Debug\net9.0\System.Composition.Runtime.dll
 D:\Project\.NET\Carties\src\AuctionService\bin\Debug\net9.0\System.Composition.TypedParts.dll
 D:\Project\.NET\Carties\src\AuctionService\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
-D:\Project\.NET\Carties\src\AuctionService\bin\Debug\net9.0\System.Text.Json.dll
 D:\Project\.NET\Carties\src\AuctionService\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
 D:\Project\.NET\Carties\src\AuctionService\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.resources.dll
 D:\Project\.NET\Carties\src\AuctionService\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -133,3 +132,7 @@ D:\Project\.NET\Carties\src\AuctionService\bin\Debug\net9.0\ru\Microsoft.CodeAna
 D:\Project\.NET\Carties\src\AuctionService\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Project\.NET\Carties\src\AuctionService\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\Project\.NET\Carties\src\AuctionService\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\Project\.NET\Carties\src\AuctionService\bin\Debug\net9.0\AutoMapper.dll
+D:\Project\.NET\Carties\src\AuctionService\bin\Debug\net9.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Project\.NET\Carties\src\AuctionService\obj\Debug\net9.0\AuctionService.sourcelink.json
+D:\Project\.NET\Carties\src\AuctionService\obj\Debug\net9.0\swae.build.ex.cache
