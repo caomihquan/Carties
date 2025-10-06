@@ -1,3 +1,4 @@
+using AuctionService.Consumes;
 using AuctionService.Data;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
@@ -13,17 +14,16 @@ builder.Services.AddDbContext<AuctionDbContext>(opt =>
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddMassTransit(x =>
 {
-    // x.AddEntityFrameworkOutbox<AuctionDbContext>(o =>
-    // {
-    //     o.QueryDelay = TimeSpan.FromSeconds(10);
+    x.AddEntityFrameworkOutbox<AuctionDbContext>(o =>
+    {
+        o.QueryDelay = TimeSpan.FromSeconds(10);
+        o.UsePostgres();
+        o.UseBusOutbox();
+    });
 
-    //     o.UsePostgres();
-    //     o.UseBusOutbox();
-    // });
+    x.AddConsumersFromNamespaceContaining<AuctionCreatedFaultConsumer>();
 
-    // x.AddConsumersFromNamespaceContaining<AuctionCreatedFaultConsumer>();
-
-    // x.SetEndpointNameFormatter(new KebabCaseEndpointNameFormatter("auction", false));
+    x.SetEndpointNameFormatter(new KebabCaseEndpointNameFormatter("auction", false));
 
     x.UsingRabbitMq((context, cfg) =>
     {
@@ -32,11 +32,11 @@ builder.Services.AddMassTransit(x =>
         //     r.Handle<RabbitMqConnectionException>();
         //     r.Interval(5, TimeSpan.FromSeconds(10));
         // });
-        cfg.Host(builder.Configuration["RabbitMq:Host"], "/", host =>
-        {
-            host.Username(builder.Configuration.GetValue("RabbitMq:Username", "guest"));
-            host.Password(builder.Configuration.GetValue("RabbitMq:Password", "guest"));
-        });
+        // cfg.Host(builder.Configuration["RabbitMq:Host"], "/", host =>
+        // {
+        //     host.Username(builder.Configuration.GetValue("RabbitMq:Username", "guest"));
+        //     host.Password(builder.Configuration.GetValue("RabbitMq:Password", "guest"));
+        // });
         cfg.ConfigureEndpoints(context);
     });
 });
